@@ -30,15 +30,24 @@ public class CreditCalculator {
     }
 
     public double getMonthPaymentCalculation(){
-        return 0;
+
+        return (100 + interestRate * monthsToRepay / 12) * creditAmount / 100  / monthsToRepay;
     }
 
     public double getAmountToRepay(){
-        return 0;
+        return (100 + interestRate * monthsToRepay / 12)  * creditAmount / 100;
     }
 
     public double getOverpaidAmount(){
-        return 0;
+        return (interestRate * monthsToRepay * creditAmount) / 1200;
     }
 
+    @Override
+    public String toString() {
+        return "CreditCalculator{" +
+                "creditAmount=" + creditAmount +
+                ", interestRate=" + interestRate +
+                ", monthsToRepay=" + monthsToRepay +
+                '}';
+    }
 }

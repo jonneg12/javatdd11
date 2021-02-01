@@ -6,6 +6,5 @@ public class Main {
 
         CreditCalculator creditCalculator = new CreditCalculator();
 
-
     }
 }
